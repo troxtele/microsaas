@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Neue Machina";
+  src: url("./fonts/NeueMachina-Regular.otf") format("opentype");
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-green: #20cd8d;
+  --base-dark: #182527;
+  --text-color: #ffffff;
+  --subscribe: #2d4048;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0d4235;
+}
+
+img {
+  width: 100%;
+}
+
+section,
+footer {
+  padding: 3.5rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  margin: auto;
+  max-width: 82rem;
+  padding: 0 2rem;
+}
+
+section {
+  color: var(--text-color);
+}
+
+/*---------------------------------------------------- 
+Main Area
+----------------------------------------------------*/
+.main {
+  background-color: var(--base-green);
+}
+.main .heading {
+  gap: 1rem;
+  font-size: 1.7rem;
+}
+.main .heading span {
+  color: var(--base-dark);
+  font-weight: 700;
+}
+.main .video {
+  max-width: 40rem;
+}
+.main .texts {
+  margin-top: 1.5rem;
+  gap: 1.5rem;
+}
+.main h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+.main .subscribe a {
+  text-transform: uppercase;
+  color: var(--base-green);
+  padding: 0.4rem 1.7rem;
+  border-radius: 30px;
+  background-color: var(--subscribe);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/*---------------------------------------------------- 
+Schedule Area
+----------------------------------------------------*/
+.schedule {
+  background-color: var(--base-dark);
+}
+.schedule .wrapper {
+  gap: 3rem;
+}
+.schedule .left-content br {
+  display: none;
+}
+.schedule .left-content h3 {
+  color: var(--base-green);
+  font-size: 2rem;
+  text-align: center;
+}
+.schedule .right-content .items {
+  gap: 1.5rem;
+}
+.schedule .right-content .item {
+  gap: 2rem;
+}
+.schedule .right-content .item .day {
+  color: var(--base-dark);
+  background-color: var(--base-green);
+  padding: 0.2rem 1rem;
+  border-radius: 15px;
+  text-transform: capitalize;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.schedule .right-content .item h3 {
+  font-size: 1.2rem;
+}
+.schedule .right-content .item h4 {
+  color: var(--text-color);
+  font-size: 1.3rem;
+}
+
+/*---------------------------------------------------- 
+Goals Area
+----------------------------------------------------*/
+.goals {
+  background-color: var(--base-green);
+}
+.goals .items {
+  gap: 3rem;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.goals .items .item {
+  background-color: var(--text-color);
+  padding: 1.5rem 1rem;
+  border-radius: 20px;
+  color: var(--base-dark);
+  max-width: 19rem;
+  text-align: center;
+  gap: 0.5rem;
+}
+.goals .items .item img {
+  max-width: 2.5rem;
+}
+.goals .items .item .bulb {
+  width: 2rem;
+}
+.goals .items .item h3 {
+  margin-top: 0.8rem;
+  color: var(--base-green);
+  font-size: 1.4rem;
+}
+.goals .items .item p {
+  font-size: 1.1rem;
+}
+
+/*---------------------------------------------------- 
+Footer Area
+----------------------------------------------------*/
+footer {
+  background-color: var(--base-dark);
+}
+footer .content {
+  gap: 1.5rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+footer img {
+  max-width: 15rem;
+}
+footer h2 {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+footer p {
+  margin-top: 0.5rem;
+  color: var(--base-green);
+  max-width: 25rem;
+  font-size: 1rem;
+  font-family: "Neue Machina";
+}
+
+@media (min-width: 640px) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+  .main .subscribe a {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 768px) {
+  section,
+  footer {
+    padding: 5rem 0;
+  }
+  /*---------------------------------------------------- 
+  Main Area
+  ----------------------------------------------------*/
+  .main {
+    background-color: var(--base-green);
+  }
+  .main .heading {
+    font-size: 2rem;
+  }
+  .main .texts {
+    gap: 4rem;
+    flex-direction: row;
+  }
+  .main h1 {
+    font-size: 3rem;
+  }
+  .main .subscribe a {
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+  }
+  /*---------------------------------------------------- 
+  Schedule Area
+  ----------------------------------------------------*/
+  .schedule {
+    background-color: var(--base-dark);
+  }
+  .schedule .wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  .schedule .wrapper br {
+    display: block;
+  }
+  .schedule .left-content {
+    grid-column: span 3/span 3;
+  }
+  .schedule .left-content h3 {
+    font-size: 2.5rem;
+  }
+  .schedule .right-content {
+    grid-column: span 4/span 4;
+  }
+  .schedule .right-content .item {
+    gap: 3rem;
+  }
+  .schedule .right-content .item .day {
+    padding: 0.2rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  .schedule .right-content .item h4 {
+    font-size: 1.7rem;
+  }
+  /*---------------------------------------------------- 
+  Footer Area
+  ----------------------------------------------------*/
+  footer h2 {
+    font-size: 2.5rem;
+  }
+  footer p {
+    font-size: 1.15rem;
+  }
+}/*# sourceMappingURL=style.css.map */

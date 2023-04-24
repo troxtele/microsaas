@@ -1,0 +1,323 @@
+// Import Font
+@font-face {
+  font-family: "Neue Machina";
+  src: url("./fonts/NeueMachina-Regular.otf") format("opentype");
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-green: #20cd8d;
+  --base-dark: #182527;
+  --text-color: #ffffff;
+  --subscribe: #2d4048;
+}
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0d4235;
+}
+
+img {
+  width: 100%;
+}
+
+section,
+footer {
+  padding: 3.5rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  margin: auto;
+  max-width: 82rem;
+  padding: 0 2rem;
+}
+
+section {
+  color: var(--text-color);
+}
+
+/*---------------------------------------------------- 
+Main Area
+----------------------------------------------------*/
+.main {
+  background-color: var(--base-green);
+
+  .heading {
+    gap: 1rem;
+    font-size: 1.7rem;
+    span {
+      color: var(--base-dark);
+      font-weight: 700;
+    }
+  }
+
+  .video {
+    max-width: 40rem;
+  }
+
+  .texts {
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subscribe {
+    a {
+      text-transform: uppercase;
+      color: var(--base-green);
+      padding: 0.4rem 1.7rem;
+      border-radius: 30px;
+      background-color: var(--subscribe);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
+}
+/*---------------------------------------------------- 
+Schedule Area
+----------------------------------------------------*/
+.schedule {
+  background-color: var(--base-dark);
+
+  .wrapper {
+    gap: 3rem;
+  }
+
+  .left-content {
+    br {
+      display: none;
+    }
+    h3 {
+      color: var(--base-green);
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  .right-content {
+    .items {
+      gap: 1.5rem;
+    }
+    .item {
+      gap: 2rem;
+
+      .day {
+        color: var(--base-dark);
+        background-color: var(--base-green);
+        padding: 0.2rem 1rem;
+        border-radius: 15px;
+        text-transform: capitalize;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      h4 {
+        color: var(--text-color);
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------- 
+Goals Area
+----------------------------------------------------*/
+.goals {
+  background-color: var(--base-green);
+
+  .items {
+    gap: 3rem;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    .item {
+      background-color: var(--text-color);
+      padding: 1.5rem 1rem;
+      border-radius: 20px;
+      color: var(--base-dark);
+      max-width: 19rem;
+      text-align: center;
+      gap: 0.5rem;
+
+      img {
+        max-width: 2.5rem;
+      }
+
+      .bulb {
+        width: 2rem;
+      }
+
+      h3 {
+        margin-top: 0.8rem;
+        color: var(--base-green);
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+/*---------------------------------------------------- 
+Footer Area
+----------------------------------------------------*/
+footer {
+  background-color: var(--base-dark);
+  .content {
+    gap: 1.5rem;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+
+  img {
+    max-width: 15rem;
+  }
+
+  h2 {
+    color: var(--text-color);
+    font-size: 2rem;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    color: var(--base-green);
+    max-width: 25rem;
+    font-size: 1rem;
+    font-family: "Neue Machina";
+  }
+}
+
+@media (min-width: 640px) {
+  .main {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .subscribe {
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  section,
+  footer {
+    padding: 5rem 0;
+  }
+/*---------------------------------------------------- 
+Main Area
+----------------------------------------------------*/
+  .main {
+    background-color: var(--base-green);
+    .heading {
+      font-size: 2rem;
+    }
+    .texts {
+      gap: 4rem;
+      flex-direction: row;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    .subscribe {
+      a {
+        font-size: 1.5rem;
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+/*---------------------------------------------------- 
+Schedule Area
+----------------------------------------------------*/
+  .schedule {
+    background-color: var(--base-dark);
+
+    .wrapper {
+      br {
+        display: block;
+      }
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+    .left-content {
+      grid-column: span 3 / span 3;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .right-content {
+      grid-column: span 4 / span 4;
+
+      .item {
+        gap: 3rem;
+
+        .day {
+          padding: 0.2rem 1.2rem;
+          font-size: 1.1rem;
+        }
+
+        h4 {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+
+/*---------------------------------------------------- 
+Footer Area
+----------------------------------------------------*/
+
+  footer {
+    h2 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.15rem;
+    }
+  }
+}
